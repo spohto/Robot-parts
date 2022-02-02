@@ -31,6 +31,7 @@ ${ZIP_DIRECTORY}                ${OUTPUT_DIR}${/}${PDF_ZIP}
 
 *** Tasks ***
 Order robots from RobotSpareBin Industries Inc
+    Log    'Ello 'ello 'ello
     ${PDF_NAME}    Open Dialog for User Input
     ${vault}    Open the vault
     Open the robot order website    ${vault}
@@ -105,7 +106,7 @@ Embed the robot screenshot to the receipt PDF file
     Open Pdf    ${pdf}
     ${files}    Create List    ${screenshot}
     Add Files To Pdf    ${files}    ${pdf}    True
-    Close Pdf    ${pdf}
+    Close Pdf
 Go to order another robot
     Wait Until Page Contains Element    id:order-another
     Wait Until Keyword Succeeds    ${RETRY_TIME}    ${RETRY_INTERVAL}
